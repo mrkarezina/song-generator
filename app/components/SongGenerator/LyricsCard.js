@@ -60,13 +60,13 @@ function LyricsCard(props) {
 
             <div>
 
-                <Ads/>
+                {/*<Ads/>*/}
 
                 <Card className={classes.card} raised={false}>
                     <CardContent>
 
                         <Typography variant="inherit" className={classes.title}>
-                            Lyrics styled after {artist}:
+                            Lyrics styled after {artist}
                         </Typography>
 
                         {/*To display the lines of lyrics, every 4 lines make a space*/}

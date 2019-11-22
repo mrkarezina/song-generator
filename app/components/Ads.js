@@ -43,15 +43,6 @@ function Ads(props) {
 
     return (
 
-        // <div className={classes.card}>
-        //     <a href="https://www.producthunt.com/posts/freshbots?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-freshbots" target="_blank" ><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=155948&theme=light" alt="Freshbots - Lyrics generator for over 40 artist styles | Product Hunt Embed" style={{
-        //         backgroundSize: 'auto 100%',
-        //         backgroundPosition: 'center center',
-        //         height: '9vh',
-        //         alignItems: 'center',
-        //     }}/></a>
-        // </div>
-
         <Card className={classes.card} raised={false}>
 
             <Grid container spacing={24}>
