@@ -56,9 +56,9 @@ function NavBar(props) {
                     <div className={classes.spacer}/>
 
 
-                    <Button variant={"text"} href={"https://markoarezina.com/"} target="_blank"
+                    <Button variant={"text"} href={"https://github.com/mrkarezina/song-generator"} target="_blank"
                             className={classes.button}>
-                        About
+                        Fork Me on Github
                     </Button>
 
                 </Toolbar>
