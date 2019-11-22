@@ -1,6 +1,5 @@
 import React from 'react'
 import LyricsGenerator from './SongGenerator/Generate'
-import HappyBirthday from './HappyBirthday/Generate'
 import NavBar from './NavBar'
 import Footer from './Footer'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
@@ -21,8 +20,6 @@ class App extends React.Component {
                     <NavBar/>
 
                     <Switch>
-
-                        <Route exact path='/angelica' component={HappyBirthday}/>
 
                         {/*404 catch all*/}
                         <Route component={LyricsGenerator}/>
