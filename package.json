@@ -1,0 +1,48 @@
+{
+  "name": "song-generator",
+  "version": "1.0.0",
+  "description": "An app to generate song lyrics",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@material-ui/core": "^3.7.1",
+    "axios": "^0.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "favicons-webpack-plugin": "0.0.9",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-rotating-text": "^1.2.1",
+    "react-router-dom": "^4.3.1"
+  }
+}
