@@ -1,26 +1,32 @@
 import React from 'react'
 import Generate from './Generate'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
 class App extends React.Component {
 
     /*
-        Structure:
-        The Welcome component parses the dataset name from the url
+        Renders NavBar, Generator (Where stuff happens), and the <Footer/>
+        Footer contains Ads
 
-        NOTE: Specify the default dataset in the Welcome page component.
-
-        Home page calls Welcome component and if no dataset specified in URL defualt in used.
-        After the OnboardingSlides slides are shown, app redirects to explorer using the dataset passed to it
-        The explorer route parses url and renders the graph explorer
-        The Demo component then fetches the right dataset and displays the vizualizer.
      */
+
 
     render() {
 
         return (
             <div>
 
-                <Generate/>
+                <NavBar/>
+
+                {/*In order for footer to work*/}
+                <div style={{minHeight: '90vh', flex: '1 0 auto'}}>
+
+                    <Generate/>
+
+                </div>
+
+                <Footer/>
 
             </div>
 

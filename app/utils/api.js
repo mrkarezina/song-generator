@@ -14,6 +14,12 @@ async function fetchLyrics(artist, numberLines, maxSyllables) {
     }).catch(function(error) {
         return []
     });
+
+    // return await axios.post('http://127.0.0.1:5000/', obj).then(response => {
+    //     return response.data.lyrics
+    // }).catch(function(error) {
+    //     return []
+    // });
 }
 
 export async function getLyrics (artist, numberLines, maxSyllables) {
@@ -24,6 +30,6 @@ export async function getLyrics (artist, numberLines, maxSyllables) {
     if(lyrics.length === 0) {
         return []
     } else {
-        return lyrics.splice(0, 30)
+        return lyrics.splice(0, 32)
     }
 }

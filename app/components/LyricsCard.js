@@ -5,6 +5,9 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
+import Ads from './Ads'
+
+
 
 const styles = {
     card: {
@@ -36,9 +39,14 @@ const styles = {
 };
 
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function LyricsCard(props) {
 
-    const {classes, lyrics} = props;
+    const {classes, lyrics, artist} = props;
+
 
     if (lyrics.length === 0) {
         return (
@@ -49,37 +57,41 @@ function LyricsCard(props) {
     } else {
 
         return (
-            <Card className={classes.card} raised={false}>
 
-                <CardContent>
+            <div>
+                <Card className={classes.card} raised={false}>
+                    <CardContent>
 
-                    <Typography variant="inherit" className={classes.title}>
-                        A song by the LyricsBot:
-                    </Typography>
+                        <Typography variant="inherit" className={classes.title}>
+                            Lyrics styled after {artist}:
+                        </Typography>
 
-                    {/*To display the lines of lyrics, every 4 lines make a space*/}
-                    {lyrics.map(function (line, index) {
-                            if (index % 4 === 0) {
-                                return (
-                                    <Typography className={classes.linePad} key={line}>
-                                        {line}
-                                    </Typography>
-                                )
-                            } else {
-                                return (
-                                    <Typography className={classes.lineNorm} key={line}>
-                                        {line}
-                                    </Typography>
-                                )
+                        {/*To display the lines of lyrics, every 4 lines make a space*/}
+                        {lyrics.map(function (line, index) {
+
+                                line = capitalizeFirstLetter(line);
+
+                                if (index % 4 === 0) {
+                                    return (
+                                        <Typography className={classes.linePad} key={line}>
+                                            {line}
+                                        </Typography>
+                                    )
+                                } else {
+                                    return (
+                                        <Typography className={classes.lineNorm} key={line}>
+                                            {line}
+                                        </Typography>
+                                    )
+                                }
                             }
+                        )}
 
+                    </CardContent>
+                </Card>
 
-                        }
-                    )}
-
-                </CardContent>
-
-            </Card>
+                <Ads/>
+            </div>
 
         )
     }
@@ -89,6 +101,7 @@ function LyricsCard(props) {
 LyricsCard.propTypes = {
     classes: PropTypes.object.isRequired,
     lyrics: PropTypes.array.isRequired,
+    artist: PropTypes.string.isRequired,
 };
 
 

@@ -1,5 +1,5 @@
 var path = require('path');
-var FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
         historyApiFallback: true,
     },
     plugins: [
-        // new FaviconsWebpackPlugin('./app/img/favicon.png'),
+        new FaviconsWebpackPlugin('./app/img/favicon.png'),
         new HtmlWebpackPlugin({
             template: 'app/index.html',
         }),

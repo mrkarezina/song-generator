@@ -8,7 +8,7 @@ import LoadingCircle from './Loading'
 import axios from 'axios'
 
 //Keep the number of lines to generate constant
-const numberLines = 250;
+const numberLines = 200;
 
 const styles = theme => ({
 
@@ -43,14 +43,15 @@ class Lyrics extends React.Component {
     render() {
 
         const {lyrics} = this.state;
+        const {artist} = this.props;
 
         return (
 
             <div>
 
                 {!lyrics
-                    ? <LoadingCircle text={["Brainstorming lyrics 🤔", "Trying to think of rhyming lines 🤨"]}/>
-                    : <LyricsCard lyrics={lyrics}/>}
+                    ? <LoadingCircle text={["Brainstorming lyrics 🤔", "Trying to think of rhyming words 🤨", "Composing beautiful lines 🧐", "Uploading Skynet 😱", "Just kidding 😂"]}/>
+                    : <LyricsCard lyrics={lyrics} artist={artist}/>}
 
             </div>
         )

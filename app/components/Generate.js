@@ -85,6 +85,13 @@ class Generate extends React.Component {
                         Endless Lyrics Generator
                     </Typography>
 
+                    {/*Reset button*/}
+                    {this.state.generateLyrics
+                        ? <Button className={classes.generateButton} onClick={this.handleGenerate}>
+                            Reset
+                        </Button>
+                        : null}
+
                     {!this.state.generateLyrics
                         ? <div>
                             <ArtistSelector callback={this.setArtist}/>
@@ -98,11 +105,12 @@ class Generate extends React.Component {
                         ? <Lyrics artist={this.state.artist} maxSyllables={this.state.syllables}/>
                         : null}
 
-                    <Button className={classes.generateButton} onClick={this.handleGenerate}>
-                        {!this.state.generateLyrics
-                            ? 'Generate Lyrics'
-                            : 'Reset'}
-                    </Button>
+                    {/*Generate button*/}
+                    {!this.state.generateLyrics
+                        ? <Button className={classes.generateButton} onClick={this.handleGenerate}>
+                            Generate
+                        </Button>
+                        : null}
 
 
                 </Grid>
