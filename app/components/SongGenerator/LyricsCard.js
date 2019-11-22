@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
-import Ads from './Ads'
+import Ads from '../Ads'
 
 
 
@@ -59,6 +59,9 @@ function LyricsCard(props) {
         return (
 
             <div>
+
+                <Ads/>
+
                 <Card className={classes.card} raised={false}>
                     <CardContent>
 
@@ -90,7 +93,6 @@ function LyricsCard(props) {
                     </CardContent>
                 </Card>
 
-                <Ads/>
             </div>
 
         )

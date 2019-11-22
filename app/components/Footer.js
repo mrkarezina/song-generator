@@ -20,7 +20,7 @@ class Footer extends Component {
                         component={'span'}
                         className={classes.white}
                     >
-                        <a href={"https://twitter.com/freshrobots"} target={'_blank'}
+                        <a href={"https://twitter.com/mrkarezina"} target={'_blank'}
                            className={classes.link}>Twitter</a>
                     </Typography>
 

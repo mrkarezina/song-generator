@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 
 import LyricsCard from "./LyricsCard";
-import {getLyrics} from '../utils/api'
+import {getLyrics} from '../../utils/api'
 import LoadingCircle from './Loading'
 import axios from 'axios'
 

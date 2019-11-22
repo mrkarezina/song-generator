@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 
+import About from './About'
 import Typography from '@material-ui/core/Typography';
 import Lyrics from './Lyrics'
 import Grid from "@material-ui/core/Grid"
@@ -76,44 +77,50 @@ class Generate extends React.Component {
     render() {
         const {classes} = this.props;
 
+        //TODO: why won't <About> outside of grid render by googlebot
+
         return (
             <div>
+                <div style={{minHeight: '90vh', flex: '1 0 auto'}}>
 
-                <Grid container spacing={8} direction={"column"} alignItems={"center"}>
+                    <Grid container spacing={8} direction={"column"} alignItems={"center"}>
 
-                    <Typography variant="inherit" className={classes.title}>
-                        Endless Lyrics Generator
-                    </Typography>
+                        <Typography variant="inherit" className={classes.title}>
+                            Freshbots Lyrics Generator
+                        </Typography>
 
-                    {/*Reset button*/}
-                    {this.state.generateLyrics
-                        ? <Button className={classes.generateButton} onClick={this.handleGenerate}>
-                            Reset
-                        </Button>
-                        : null}
+                        {/*Reset button*/}
+                        {this.state.generateLyrics
+                            ? <Button className={classes.generateButton} onClick={this.handleGenerate}>
+                                Reset
+                            </Button>
+                            : null}
 
-                    {!this.state.generateLyrics
-                        ? <div>
-                            <ArtistSelector callback={this.setArtist}/>
-                            <SylablesSelector callback={this.setSylables}/>
-                            <div className={classes.spacer}></div>
-                        </div>
-                        : null}
+                        {!this.state.generateLyrics
+                            ? <div>
+                                <ArtistSelector callback={this.setArtist}/>
+                                <SylablesSelector callback={this.setSylables}/>
+                                <div className={classes.spacer}></div>
+                            </div>
+                            : null}
 
-                    {/*If the artist and the generateLyrics button have been set*/}
-                    {(this.state.generateLyrics && this.state.artist)
-                        ? <Lyrics artist={this.state.artist} maxSyllables={this.state.syllables}/>
-                        : null}
+                        {/*If the artist and the generateLyrics button have been set*/}
+                        {(this.state.generateLyrics && this.state.artist)
+                            ? <Lyrics artist={this.state.artist} maxSyllables={this.state.syllables}/>
+                            : null}
 
-                    {/*Generate button*/}
-                    {!this.state.generateLyrics
-                        ? <Button className={classes.generateButton} onClick={this.handleGenerate}>
-                            Generate
-                        </Button>
-                        : null}
+                        {/*Generate button*/}
+                        {!this.state.generateLyrics
+                            ? <Button className={classes.generateButton} onClick={this.handleGenerate}>
+                                Generate
+                            </Button>
+                            : null}
 
+                        <About/>
 
-                </Grid>
+                    </Grid>
+
+                </div>
 
             </div>
         );

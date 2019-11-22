@@ -1,7 +1,9 @@
 import React from 'react'
-import Generate from './Generate'
+import LyricsGenerator from './SongGenerator/Generate'
+import HappyBirthday from './HappyBirthday/Generate'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 class App extends React.Component {
 
@@ -11,24 +13,25 @@ class App extends React.Component {
 
      */
 
-
     render() {
 
         return (
-            <div>
+            <Router>
+                <div>
+                    <NavBar/>
 
-                <NavBar/>
+                    <Switch>
 
-                {/*In order for footer to work*/}
-                <div style={{minHeight: '90vh', flex: '1 0 auto'}}>
+                        <Route exact path='/angelica' component={HappyBirthday}/>
 
-                    <Generate/>
+                        {/*404 catch all*/}
+                        <Route component={LyricsGenerator}/>
+                    </Switch>
+
+                    <Footer/>
 
                 </div>
-
-                <Footer/>
-
-            </div>
+            </Router>
 
         )
     }

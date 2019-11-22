@@ -48,7 +48,7 @@ function NavBar(props) {
             <AppBar color={"inherit"} className={classes.appBar}>
                 <Toolbar>
 
-                    <Button variant={"text"} className={classes.homeButton} disableRipple={true}>
+                    <Button variant={"text"} className={classes.homeButton} disableRipple={true} href={"https://markoarezina.com/"}>
                         <img src={logo} className={classes.logo}/>
                     </Button>
 
@@ -56,7 +56,7 @@ function NavBar(props) {
                     <div className={classes.spacer}/>
 
 
-                    <Button variant={"text"} href={"https://www.subscribepage.com/freshbots"} target="_blank"
+                    <Button variant={"text"} href={"https://markoarezina.com/"} target="_blank"
                             className={classes.button}>
                         About
                     </Button>
