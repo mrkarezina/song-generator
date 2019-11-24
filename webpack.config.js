@@ -1,6 +1,7 @@
-var path = require('path');
-var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+let path = require('path');
+let FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     entry: ['@babel/polyfill', './app/index.js'],
@@ -27,6 +28,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'app/index.html',
         }),
+        // Used to copy all files in public folder to root of dist bundle
+        new CopyWebpackPlugin([
+            { from: 'public'}
+        ])
     ],
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };
