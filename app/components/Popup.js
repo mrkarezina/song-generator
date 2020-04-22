@@ -1,5 +1,5 @@
 import React from 'react';
-import adImage from '../img/MyVoiceBriefingAd.png'
+import adImage from '../img/myVoiceBriefing.png'
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -34,17 +34,11 @@ const styles = {
 };
 
 
-function Ads(props) {
-    /**
-     Component used to render an image ad that links to a clickbank offer.
-     */
-
+function Popup(props) {
     const {classes} = props;
 
     return (
-
         <Card className={classes.card} raised={false}>
-
             <Grid container spacing={24}>
                     <CardActionArea component="a" href={adLink} target="_blank" rel="nofollow">
                         <CardContent>
@@ -52,7 +46,6 @@ function Ads(props) {
                                  src={adImage}/>
                         </CardContent>
                     </CardActionArea>
-
 
                     {/*<CardContent>*/}
                         {/*<img className={classes.image}*/}
@@ -64,7 +57,7 @@ function Ads(props) {
 
 }
 
-Ads.propTypes = {};
+Popup.propTypes = {};
 
 
-export default withStyles(styles)(Ads);
+export default withStyles(styles)(Popup);

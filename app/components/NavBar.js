@@ -10,7 +10,6 @@ import logo from '../img/logo_transparent.png'
 
 const styles = theme => ({
     root: {
-        //5*theme spacing unit
         paddingBottom: 3*theme.spacing.unit,
         flexGrow: 1
     },
@@ -18,8 +17,6 @@ const styles = theme => ({
         position: 'wrap',
     },
     homeButton: {
-
-        //No hover effect for logo button
         "&:hover": {
             backgroundColor: 'transparent',
         },

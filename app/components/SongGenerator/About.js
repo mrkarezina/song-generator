@@ -46,7 +46,6 @@ function AboutCard(props) {
         <div>
             <Card className={classes.card} raised={false}>
                 <CardContent>
-
                     <Typography variant="subtitle2" className={classes.title}>
                         Lyrics Generator
                     </Typography>
@@ -58,7 +57,6 @@ function AboutCard(props) {
                     <Typography variant="title" className={classes.keywords}>
                         Random Song Lyrics Generator - Funny Lyrics Generator - AI Lyrics Generator - Funny Song Lyrics - Automatic Song Lyrics Generator - Song Generator - Rap Generator
                     </Typography>
-
                 </CardContent>
             </Card>
         </div>

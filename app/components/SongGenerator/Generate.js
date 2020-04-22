@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-
-import About from './About'
 import Typography from '@material-ui/core/Typography';
-import Lyrics from './Lyrics'
 import Grid from "@material-ui/core/Grid"
+import Button from '@material-ui/core/Button'
+import {Helmet} from "react-helmet";
+import About from './About'
+import Lyrics from './Lyrics'
 import ArtistSelector from './ArtistSelector'
 import SylablesSelector from './SylablesSelector'
-import Button from '@material-ui/core/Button'
 
 
 const styles = {
@@ -77,10 +77,16 @@ class Generate extends React.Component {
     render() {
         const {classes} = this.props;
 
-        //TODO: why won't <About> outside of grid render by googlebot
-
         return (
             <div>
+
+                <Helmet>
+                    <meta charSet="utf-8"/>
+                    <title>Lyrics Generator</title>
+                    <meta name="description" content="Use AI to generate lyrics in the style of an artist of your choice. Select from over 40 artists, as well as length and syllables." />
+                    <link rel="canonical" href="https://www.freshbots.org/lyrics-generator"/>
+                </Helmet>
+
                 <div style={{minHeight: '90vh', flex: '1 0 auto'}}>
 
                     <Grid container spacing={8} direction={"column"} alignItems={"center"}>
@@ -115,12 +121,9 @@ class Generate extends React.Component {
                                 Generate
                             </Button>
                             : null}
-
-                        <About/>
-
                     </Grid>
-
                 </div>
+                <About/>
 
             </div>
         );
