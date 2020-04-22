@@ -1,37 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import PropTypes from "prop-types";
+import {withStyles} from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
 
 
 const styles = {
     card: {
-        marginTop: '25px',
-        marginBottom: '25px',
-        padding: '20px',
+        marginTop: "25px",
+        marginBottom: "25px",
+        padding: "20px",
     },
     title: {
-        fontFamily: 'Roboto',
+        fontFamily: "Roboto",
         fontSize: 20,
-        color: '#1e1e1e',
-        textAlign: 'center',
-        paddingBottom: '15px'
+        color: "#1e1e1e",
+        textAlign: "center",
+        paddingBottom: "15px"
     },
     text: {
-        fontFamily: 'Roboto',
+        fontFamily: "Roboto",
         fontSize: 16,
-        color: '#1e1e1e',
-        textAlign: 'center',
-        paddingBottom: '15px'
+        color: "#1e1e1e",
+        textAlign: "center",
+        paddingBottom: "15px"
     },
     keywords: {
-        fontFamily: 'Roboto',
+        fontFamily: "Roboto",
         fontSize: 16,
-        color: '#595959',
-        textAlign: 'center',
-        paddingBottom: '15px'
+        color: "#595959",
+        textAlign: "center",
+        paddingBottom: "15px"
     },
 
 };
@@ -61,7 +61,7 @@ function AboutCard(props) {
             </Card>
         </div>
 
-    )
+    );
 
 }
 

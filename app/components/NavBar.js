@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types'
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import Toolbar from '@material-ui/core/Toolbar';
+import React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@material-ui/core/AppBar";
+import Button from "@material-ui/core/Button";
+import Toolbar from "@material-ui/core/Toolbar";
 
-import {withStyles} from '@material-ui/core/styles';
+import {withStyles} from "@material-ui/core/styles";
 
-import logo from '../img/logo_transparent.png'
+import logo from "../img/logo_transparent.png";
 
 const styles = theme => ({
     root: {
@@ -14,11 +14,11 @@ const styles = theme => ({
         flexGrow: 1
     },
     appBar: {
-        position: 'wrap',
+        position: "wrap",
     },
     homeButton: {
         "&:hover": {
-            backgroundColor: 'transparent',
+            backgroundColor: "transparent",
         },
     },
     logo: {
@@ -54,14 +54,14 @@ function NavBar(props) {
 
 
                     <Button variant={"text"} href={"https://github.com/mrkarezina/song-generator"} target="_blank"
-                            className={classes.button}>
+                        className={classes.button}>
                         Fork Me on Github
                     </Button>
 
                 </Toolbar>
             </AppBar>
         </div>
-    )
+    );
 }
 
 NavBar.propTypes = {

@@ -1,10 +1,10 @@
-import axios from 'axios'
+import axios from "axios";
 
 //Get the lyrics which is a list of the lyrics lines
 async function fetchLyrics(artist, numberLines, maxSyllables) {
 
     const obj = {
-        cloud_function: 'lyrics-generator',
+        cloud_function: "lyrics-generator",
         args: {
             artist: artist,
             lyric_length: numberLines,
@@ -12,11 +12,11 @@ async function fetchLyrics(artist, numberLines, maxSyllables) {
         },
     };
 
-    return await axios.post('https://ai-labs-226917.appspot.com', obj).then(response => {
+    return await axios.post("https://ai-labs-226917.appspot.com", obj).then(response => {
 
-        return response.data.lyrics
+        return response.data.lyrics;
     }).catch(function(error) {
-        return []
+        return [];
     });
 
     // return await axios.post('http://127.0.0.1:5000/', obj).then(response => {
@@ -32,9 +32,9 @@ export async function getLyrics (artist, numberLines, maxSyllables) {
     ]);
 
     if(lyrics.length === 0) {
-        return []
+        return [];
     } else {
-        return lyrics.splice(0, 32)
+        return lyrics.splice(0, 32);
     }
 }
 
@@ -465,5 +465,5 @@ function choose(choices) {
 }
 
 export async function getInspirationalQuote () {
-    return choose(qoutes['quoteList'])["quote"]
+    return choose(qoutes["quoteList"])["quote"];
 }

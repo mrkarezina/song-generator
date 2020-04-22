@@ -1,39 +1,39 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import PropTypes from "prop-types";
+import {withStyles} from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
 
-import Popup from '../Popup'
+import Popup from "../Popup";
 
 
 
 const styles = {
     card: {
-        marginTop: '25px',
-        marginBottom: '25px',
-        padding: '20px',
+        marginTop: "25px",
+        marginBottom: "25px",
+        padding: "20px",
     },
     title: {
-        fontFamily: 'Roboto',
+        fontFamily: "Roboto",
         fontSize: 24,
-        color: '#1e1e1e',
-        textAlign: 'left',
-        paddingBottom: '15px'
+        color: "#1e1e1e",
+        textAlign: "left",
+        paddingBottom: "15px"
     },
     lineNorm: {
-        fontFamily: 'Roboto',
+        fontFamily: "Roboto",
         fontSize: 14,
-        color: '#1e1e1e',
-        textAlign: 'left',
+        color: "#1e1e1e",
+        textAlign: "left",
     },
     linePad: {
-        fontFamily: 'Roboto',
+        fontFamily: "Roboto",
         fontSize: 14,
-        color: '#1e1e1e',
-        textAlign: 'left',
-        paddingTop: '10px'
+        color: "#1e1e1e",
+        textAlign: "left",
+        paddingTop: "10px"
     },
 
 };
@@ -53,7 +53,7 @@ function LyricsCard(props) {
             <Typography variant="inherit" className={classes.title}>
                 Looks like the bot is taking a break 😴 come back later
             </Typography>
-        )
+        );
     } else {
         return (
             <div>
@@ -64,26 +64,26 @@ function LyricsCard(props) {
                             Lyrics styled after {artist}
                         </Typography>
                         {lyrics.map(function (line, index) {
-                                line = capitalizeFirstLetter(line);
-                                if (index % 4 === 0) {
-                                    return (
-                                        <Typography className={classes.linePad} key={line}>
-                                            {line}
-                                        </Typography>
-                                    )
-                                } else {
-                                    return (
-                                        <Typography className={classes.lineNorm} key={line}>
-                                            {line}
-                                        </Typography>
-                                    )
-                                }
+                            line = capitalizeFirstLetter(line);
+                            if (index % 4 === 0) {
+                                return (
+                                    <Typography className={classes.linePad} key={line}>
+                                        {line}
+                                    </Typography>
+                                );
+                            } else {
+                                return (
+                                    <Typography className={classes.lineNorm} key={line}>
+                                        {line}
+                                    </Typography>
+                                );
                             }
+                        }
                         )}
                     </CardContent>
                 </Card>
             </div>
-        )
+        );
     }
 }
 

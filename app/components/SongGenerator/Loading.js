@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Grid from "@material-ui/core/Grid"
-import Typography from '@material-ui/core/Typography';
-import ReactRotatingText from 'react-rotating-text'
+import React from "react";
+import PropTypes from "prop-types";
+import {withStyles} from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import ReactRotatingText from "react-rotating-text";
 
 
 //TODO fix this
 const styles = theme => ({
     container: {
-      marginBottom: '30px'
+        marginBottom: "30px"
     },
     progress: {
         color: "black",
@@ -19,7 +19,7 @@ const styles = theme => ({
     },
 
     text: {
-        fontSize: '25px',
+        fontSize: "25px",
     }
 });
 

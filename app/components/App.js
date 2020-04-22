@@ -1,8 +1,8 @@
-import React from 'react'
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import LyricsGenerator from './SongGenerator/Generate'
-import NavBar from './NavBar'
-import Footer from './Footer'
+import React from "react";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import LyricsGenerator from "./SongGenerator/Generate";
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 class App extends React.Component {
     render() {
@@ -16,7 +16,7 @@ class App extends React.Component {
                     <Footer/>
                 </div>
             </Router>
-        )
+        );
     }
 }
 

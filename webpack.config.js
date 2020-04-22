@@ -1,7 +1,7 @@
 let path = require('path');
 let FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 let HtmlWebpackPlugin = require('html-webpack-plugin');
-let CopyWebpackPlugin = require('copy-webpack-plugin')
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ['@babel/polyfill', './app/index.js'],
