@@ -4,15 +4,12 @@ import axios from 'axios'
 async function fetchLyrics(artist, numberLines, maxSyllables) {
 
     const obj = {
-        cloud_function: 'lyrics-generator',
-        args: {
-            artist: artist,
-            lyric_length: numberLines,
-            max_syllables: maxSyllables,
-        },
+        artist: artist,
+        lyric_length: numberLines,
+        max_syllables: maxSyllables,
     };
 
-    return await axios.post('https://ai-labs-226917.appspot.com', obj).then(response => {
+    return await axios.post('https://us-central1-ai-labs-226917.cloudfunctions.net/lyrics-generator-cors', obj).then(response => {
 
         return response.data.lyrics
     }).catch(function(error) {
